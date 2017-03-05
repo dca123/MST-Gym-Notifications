@@ -1,0 +1,23 @@
+{
+    "name": "gymnotifier",
+    "version": "1.0.0",
+    "description": "Checks how many people are there in the MST Gym and pushes a notification",
+    "main": "gymNotifier.js",
+    "scripts": {
+        "test": "node gymNotifier.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dca123/MST-Gym-Notifications.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dca123/MST-Gym-Notifications/issues"
+    },
+    "homepage": "https://github.com/dca123/MST-Gym-Notifications#readme",
+    "dependencies": {
+        "request": "2.80.0",
+        "moment-timezone": "0.5.11"
+    }
+}
