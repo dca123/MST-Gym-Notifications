@@ -6,6 +6,7 @@ Sends a push message onto this [channel](https://www.pushbullet.com/channel) if 
 Can also be configured to read off any google spreadsheet and push to any channel
 
 Remember to npm install !
+
 Requires a config.json file with the following format
 ```json
 {
