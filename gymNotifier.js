@@ -22,7 +22,7 @@ var checkForPeople = function() {
     res.on('end', () => {
       let parsedData = JSON.parse(rawData);
       gymCount = parsedData['values'][0][0];
-      // if (gymCount <= config.maxPeople && time > config.time.min && time < config.time.max) {
+      if (gymCount <= config.maxPeople && time > config.time.min && time < config.time.max) {
         request({
           method: 'POST',
           uri: 'https://api.pushbullet.com/v2/pushes',
@@ -39,7 +39,7 @@ var checkForPeople = function() {
         }, function callBack(err, httpResponse, body) {
           console.log(body);
         })
-      // }
+      }
       console.log(parsedData['values'][0][0]);
     });
   });
