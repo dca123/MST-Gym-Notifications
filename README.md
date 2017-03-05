@@ -6,6 +6,7 @@ Sends a push message onto this [channel](https://www.pushbullet.com/channel) if 
 Can also be configured to read off any google spreadsheet and push to any channel
 
 Requires a config.json file with the following format
+```json
 {
   "pushbulletApi": "API HERE",
   "googleApi": "API HERE",
@@ -21,4 +22,5 @@ Requires a config.json file with the following format
     "max": 21,
     "min": 6
   }
-  }
+}
+```
