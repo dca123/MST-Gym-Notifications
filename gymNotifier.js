@@ -1,4 +1,4 @@
-var http = require('https');
+var https = require('https');
 var request = require('request');
 var moment = require('moment-timezone');
 
@@ -6,7 +6,7 @@ var gymCount = 0;
 var time = moment().tz("America/Chicago");
 
 var checkForPeople = function() {
-  http.get({
+  https.get({
     hostname: 'sheets.googleapis.com',
     port: 443,
     path: '/v4/spreadsheets/tA8NerswljZvsnzu5hIZHRg/values/B11?key=AIzaSyC9SFuRFmL6uEvUiW3J7hVfG7qqAD0wFyk',
