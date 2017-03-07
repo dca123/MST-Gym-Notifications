@@ -7,7 +7,7 @@ var googleApi = config.googleApi;
 var pushbulletApi = config.pushbulletApi;
 var cell = config.cell;
 var gymCount = 0;
-var time = moment().tz(config.timezone);
+var time = moment().tz(config.timezone).hour();
 
 var checkForPeople = function() {
   https.get({
