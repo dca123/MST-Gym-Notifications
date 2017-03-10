@@ -42,7 +42,7 @@ var checkForPeople = function() {
             console.log("pushed message");
           })
         }
-        console.log(parsedData['values'][0][0] " people in the gym");
+        console.log(parsedData['values'][0][0] + " people in the gym");
       });
     });
   } else {
