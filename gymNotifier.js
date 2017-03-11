@@ -51,4 +51,4 @@ var checkForPeople = function() {
 }
 
 checkForPeople();
-setInterval(checkForPeople, 30 * 60 * 1000);
+setInterval(checkForPeople, 60 * 60 * 1000);
