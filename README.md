@@ -1,13 +1,29 @@
-# MST Gym Notifications
 
-Checks the MST Gym google sheet every 30 minuites to see if there is fewer than 35 people in the gym.
-Sends a push message onto  your own [channel](https://www.pushbullet.com/my-channel) if there is any update.
+![S&T Gym Notifications](https://i.imgur.com/weof0VV.png)
 
-Can also be configured to read off any google spreadsheet and push to any channel
+---
+# Table of Contents
+- [Problem](#problem)
+- [Solution](#solution)
+- [Features](#features)
+- [Usage](#usage)
 
-Remember to npm install !
+# Problem
+The gym here at S&T can get quite busy and be almost impossible to work out in. Fortunately, there have a [website](https://sites.google.com/a/mst.edu/src-mobile-site/home/live-stats) that shows live stats from the gym. Unfortunately, this website is not the most user-friendly and it requires me to check it every time before I think about going.
 
-Requires a config.json file with the following format
+# Solution
+Instead of me having to check every time, this script will notify me on my phone when the number of people in the gym is below 35. It will read the data from the google spreadsheet with the live stats and when the condition is met, a push notification is sent via a custom channel on pushbullet. 
+
+# Features
+- Checks the MST Gym google sheet every x minutes
+- Checks to see if there are fewer than x people in the gym.
+
+# Usage
+1. Install dependencies
+```bash
+npm install
+```
+2. Create a `config.json` file as specified here
 ```json
 {
   "pushbulletApi": "API HERE",
@@ -25,4 +41,8 @@ Requires a config.json file with the following format
     "min": 6
   }
 }
+```
+3. Start the server
+```
+node gymNotifier.js
 ```
